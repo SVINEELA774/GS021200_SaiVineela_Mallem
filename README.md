@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# Data Viewer App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This is a **Progressive Web App (PWA)** built with **ReactJS and TypeScript** for data manipulation and analysis. The application includes functionalities such as adding, updating, and visualizing data using chart libraries.
 
-## Available Scripts
+## Features
+- **Stores Page**: Add, remove, update, and reorder stores.
+- **SKUs Page**: Manage SKUs with Prices and Costs.
+- **Planning Page**: AG-Grid displaying cross join of Stores and SKUs with calculated fields and conditional formatting.
+- **Chart Page**: Visualizing GM Dollars and GM %.
+- **Navigation**:
+  - Top navigation bar with logo and authentication.
+  - Left sidebar with icons and labels.
+- **Responsive Design**: Minimum width of 1080px.
+- **Styling**: Uses a popular UI library.
 
-In the project directory, you can run:
+## Installation
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/your-repo/data-viewer-app.git
+   cd data-viewer-app
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+3. **Run the application:**
+   ```sh
+   npm start
+   ```
+4. **Build for production:**
+   ```sh
+   npm run build
+   ```
 
-### `npm start`
+## Folder Structure
+```
+/data-viewer-app
+│-- src
+│   │-- components/   # Reusable UI components
+│   │-- pages/        # Main pages (Stores, SKUs, Planning, Charts)
+│   │-- hooks/        # Custom hooks
+│   │-- utils/        # Helper functions
+│   │-- assets/       # Images & static files
+│-- public/           # Static assets
+│-- package.json      # Project dependencies
+│-- tsconfig.json     # TypeScript configuration
+│-- README.md         # Project documentation
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tech Stack
+- **Frontend:** ReactJS, TypeScript
+- **State Management:** useState, useEffect, useContext
+- **UI Library:** Material UI / Chakra UI
+- **Data Grid:** AG-Grid
+- **Charts:** Recharts, Chart.js, D3.js
+- **PWA Support:** Service Workers
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Issues & Debugging
+- **TS2345 Type Errors:** Ensure correct prop types in `onChange` handlers.
+- **ESLint Hook Errors:** Make sure hooks like `useState` are used inside function components.
+- **Module Build Errors:** Check for misplaced `return` statements inside components.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
